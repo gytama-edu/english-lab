@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Jeopardy | English Lab by GYTama EDU</title>
+    <meta name="description" content="Host-controlled classroom Jeopardy game for English practice.">
+    <meta name="theme-color" content="#FF9E4A">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Oxanium:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="english-jeopardy.css">
+</head>
+<body class="lab-page jeopardy-game">
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="brand">
+                <a href="../index.html" class="logo-link" aria-label="Go to homepage">
+                    <div class="logo-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M12 2v2"></path>
+                            <path d="M12 20v2"></path>
+                            <path d="M2 12h2"></path>
+                            <path d="M20 12h2"></path>
+                            <path d="M19.071 4.929l-1.414 1.414"></path>
+                            <path d="M6.343 17.657l-1.414 1.414"></path>
+                            <path d="M19.071 19.071l-1.414-1.414"></path>
+                            <path d="M6.343 6.343L4.929 4.929"></path>
+                        </svg>
+                    </div>
+                    <div class="logo-text-group">
+                        <span class="logo-text">English Lab</span>
+                        <span class="brand-signature">by GYTama EDU</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" class="section-container" style="flex-grow: 1; padding-top: 100px;">
+        <!-- Loading state -->
+        <div id="loading-state" style="text-align: center; padding: 4rem;">
+            <div class="spinner" style="border: 4px solid rgba(255,158,74,0.3); border-top-color: var(--orange); border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 0 auto 1rem;"></div>
+            <p>Loading English Jeopardy...</p>
+        </div>
+
+        <div id="game-container" style="display: none; height: 100%; width: 100%;">
+            <!-- Rendered by JS -->
+        </div>
+    </main>
+
+    <!-- ARIA Live Region for Screen Readers -->
+    <div id="game-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="../data/games/english-mix-challenge.js"></script>
+    <script src="english-jeopardy.js"></script>
+    <style>
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+    </style>
+</body>
+</html>

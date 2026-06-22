@@ -1,0 +1,547 @@
+/* lesson.css - Reusable Lesson Design System */
+
+.lesson-page {
+    /* Base styles inherited from styles.css */
+}
+
+/* Breadcrumb */
+.lesson-breadcrumb {
+    margin: 1rem 0 2rem;
+    font-size: 14px;
+    color: var(--text-secondary);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+.lesson-breadcrumb a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+.lesson-breadcrumb a:hover {
+    color: var(--lab-accent, var(--blue));
+}
+
+.lesson-breadcrumb span.separator {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.lesson-breadcrumb span.current {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+/* Shell and Layout */
+.lesson-shell {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 100px 20px 60px;
+    min-height: calc(100vh - 200px);
+}
+
+/* Header */
+.lesson-header {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--lab-accent, var(--blue));
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, transparent 100%);
+}
+
+.lesson-icon {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 120px;
+    height: 120px;
+    opacity: 0.05;
+    color: var(--lab-accent, var(--blue));
+    pointer-events: none;
+}
+
+.lesson-label {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--lab-accent, var(--blue));
+    text-transform: uppercase;
+}
+
+.lesson-title {
+    font-family: var(--font-heading);
+    font-size: clamp(32px, 4vw, 42px);
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+
+.lesson-level {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.lesson-intro {
+    font-size: 17px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    max-width: 600px;
+    margin-bottom: 1rem;
+}
+
+.lesson-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Table of Contents */
+.lesson-toc {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.lesson-toc__heading {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.lesson-toc__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lesson-toc__list li a {
+    display: inline-block;
+    padding: 6px 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.lesson-toc__list li a:hover,
+.lesson-toc__list li a:focus-visible {
+    border-color: var(--lab-accent, var(--blue));
+    color: var(--text-primary);
+}
+
+/* Sections */
+.lesson-section {
+    margin-bottom: 4rem;
+}
+
+.lesson-section > h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(26px, 3vw, 32px);
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.lesson-subsection {
+    margin-bottom: 2.5rem;
+}
+
+.lesson-subsection > h3 {
+    font-family: var(--font-heading);
+    font-size: clamp(20px, 2.5vw, 24px);
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.lesson-section p,
+.lesson-subsection p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.lesson-section ul:not(.lesson-toc__list):not(.example-list) {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.lesson-section li {
+    margin-bottom: 0.5rem;
+}
+
+/* Highlighted Notes */
+.lesson-note {
+    background: rgba(77, 163, 255, 0.05); /* Blue-ish tint */
+    border-left: 4px solid var(--lab-accent, var(--blue));
+    padding: 1.25rem;
+    border-radius: 0 8px 8px 0;
+    margin: 1.5rem 0;
+}
+
+.lesson-note p {
+    margin-bottom: 0;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.lesson-note.warning {
+    background: rgba(255, 171, 0, 0.05);
+    border-left-color: #FFAB00;
+}
+
+/* Examples */
+.lesson-example {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.lesson-example__heading {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.example-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.example-list > li {
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+    font-size: 16px;
+}
+
+.example-list > li:last-child {
+    border-bottom: none;
+}
+
+/* Contrast Cards (Side-by-side or stacked rules) */
+.lesson-contrast-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+@media (min-width: 600px) {
+    .lesson-contrast-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.lesson-contrast-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem;
+}
+
+.lesson-contrast-card__tense {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--lab-accent, var(--blue));
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.lesson-contrast-card__sentence {
+    font-size: 17px;
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.lesson-contrast-card__meaning {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+/* Mistakes */
+.lesson-mistake-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .lesson-mistake-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.lesson-mistake {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.mistake-row {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.mistake-row.incorrect {
+    background: rgba(230, 107, 255, 0.05); /* Pinkish tint */
+}
+
+.mistake-row.correct {
+    background: rgba(74, 216, 193, 0.05); /* Greenish tint */
+}
+
+.mistake-label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.mistake-row.incorrect .mistake-label { color: #E66BFF; }
+.mistake-row.correct .mistake-label { color: #4AD8C1; }
+
+.mistake-sentence {
+    font-size: 16px;
+    color: var(--text-primary);
+}
+
+.mistake-row.incorrect .mistake-sentence {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.mistake-explanation {
+    padding: 1rem;
+}
+
+.mistake-explanation__label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 0.25rem;
+    display: block;
+}
+
+.mistake-explanation__text {
+    font-size: 14px;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+/* Tables */
+.lesson-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.lesson-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px;
+}
+
+.lesson-table th,
+.lesson-table td {
+    padding: 1rem 1.25rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+.lesson-table th {
+    background: rgba(255, 255, 255, 0.03);
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.lesson-table td {
+    font-size: 15px;
+    color: var(--text-secondary);
+}
+
+.lesson-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Guided Checks */
+.guided-check {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.guided-check__prompt {
+    font-size: 16px;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.guided-check details {
+    margin-top: 1rem;
+}
+
+.guided-check summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--lab-accent, var(--blue));
+    user-select: none;
+    outline: none;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px;
+}
+
+.guided-check summary:focus-visible {
+    outline: 2px solid var(--lab-accent, var(--blue));
+    outline-offset: 4px;
+}
+
+.guided-check summary::before {
+    content: "►";
+    font-size: 12px;
+    transition: transform 0.2s;
+}
+
+.guided-check details[open] summary::before {
+    transform: rotate(90deg);
+}
+
+.guided-check__answer {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--surface);
+    border-left: 3px solid var(--lab-accent, var(--blue));
+    border-radius: 0 4px 4px 0;
+    color: var(--text-primary);
+    font-size: 15px;
+}
+
+/* Practice CTA */
+.lesson-practice-cta {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-top: 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.lesson-practice-cta::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--lab-accent, var(--blue));
+}
+
+.lesson-practice-cta__label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--lab-accent, var(--blue));
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.lesson-practice-cta__heading {
+    font-family: var(--font-heading);
+    font-size: clamp(28px, 4vw, 36px);
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.lesson-practice-cta__text {
+    font-size: 16px;
+    color: var(--text-secondary);
+    max-width: 500px;
+    margin: 0 auto 2rem;
+}
+
+.lesson-practice-cta__actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .lesson-shell {
+        padding: 80px 16px 40px;
+    }
+    
+    .lesson-header {
+        padding: 1.5rem;
+    }
+    
+    .lesson-actions {
+        flex-direction: column;
+    }
+    
+    .lesson-actions .button {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .lesson-practice-cta__actions {
+        flex-direction: column;
+    }
+    
+    .lesson-practice-cta__actions .button {
+        width: 100%;
+        justify-content: center;
+    }
+}

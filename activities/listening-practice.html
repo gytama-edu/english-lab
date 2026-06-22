@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listening Practice - English Lab</title>
+    <meta name="description" content="Interactive English learning activity from English Lab by GYTama EDU.">
+    <meta name="theme-color" content="#4DA3FF">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Oxanium:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="activity.css">
+    <link rel="stylesheet" href="listening-practice.css">
+</head>
+<body class="activity-page">
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="brand">
+                <a href="../index.html" class="logo-link" aria-label="Go to homepage">
+                    <div class="logo-icon-wrapper">
+                        <!-- Tiny orbit / star mark -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M12 2v2"></path>
+                            <path d="M12 20v2"></path>
+                            <path d="M2 12h2"></path>
+                            <path d="M20 12h2"></path>
+                            <path d="M19.071 4.929l-1.414 1.414"></path>
+                            <path d="M6.343 17.657l-1.414 1.414"></path>
+                            <path d="M19.071 19.071l-1.414-1.414"></path>
+                            <path d="M6.343 6.343L4.929 4.929"></path>
+                        </svg>
+                    </div>
+                    <div class="logo-text-group">
+                        <span class="logo-text">English Lab</span>
+                        <span class="brand-signature">by GYTama EDU</span>
+                    </div>
+                </a>
+            </div>
+            
+            <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+                <span class="hamburger"></span>
+            </button>
+            
+            <nav id="nav-menu" class="nav-menu" role="navigation" aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../index.html#labs" class="nav-link">The Labs</a></li>
+                    <li><a href="../index.html#about" class="nav-link">About</a></li>
+                </ul>
+                <a href="../index.html#labs" class="button button-primary nav-btn">
+                    Explore Labs
+                    <svg class="explore-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+                        <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+                        <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+                        <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+                    </svg>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="activity-shell" style="padding-top: 60px;">
+        <div class="activity-container">
+            <header class="activity-header" style="margin-bottom: 1rem; text-align: left; max-width: 760px; margin-left: auto; margin-right: auto;">
+                <nav aria-label="Breadcrumb">
+                    <a href="../labs/listening.html" class="activity-back-link" style="margin-bottom: 0;">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>
+                        Back to Listening Lab
+                    </a>
+                </nav>
+            </header>
+
+            <div id="loading-state" class="activity-unavailable" aria-live="polite">
+                <div class="loader" style="margin: 0 auto 1.5rem;"></div>
+                <p class="activity-unavailable__text">Loading activity...</p>
+            </div>
+
+            <div id="error-state" class="activity-unavailable" aria-live="polite" hidden>
+                <h1 class="activity-unavailable__heading" tabindex="-1">Activity Unavailable</h1>
+                <p id="error-message" class="activity-unavailable__text">We couldn't load this activity. It might not exist or the URL is incorrect.</p>
+                <a href="../labs/listening.html" id="error-back-link" class="button button-primary">Return to Listening Lab</a>
+            </div>
+
+            <div id="activity-container" class="listening-activity-container" hidden>
+                <!-- Dynamic stages will be injected here -->
+            </div>
+            
+            <div id="announcer" class="sr-only" aria-live="polite"></div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="footer-logo">English Lab</span>
+                <span class="footer-signature">by GYTama EDU</span>
+                <p class="footer-tagline">Learn. Practise. Communicate.</p>
+            </div>
+            <nav class="footer-nav" aria-label="Footer Navigation">
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#labs">The Labs</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright">&copy; <span id="current-year"></span> GYTama EDU. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="listening-practice.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson | English Lab by GYTama EDU</title>
+    <meta name="description" content="English Lab lesson.">
+    <meta name="theme-color" content="#4DA3FF">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Oxanium:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="lesson.css">
+</head>
+<body class="lesson-page grammar-lab">
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="brand">
+                <a href="../index.html" class="logo-link" aria-label="Go to homepage">
+                    <div class="logo-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M12 2v2"></path>
+                            <path d="M12 20v2"></path>
+                            <path d="M2 12h2"></path>
+                            <path d="M20 12h2"></path>
+                            <path d="M19.071 4.929l-1.414 1.414"></path>
+                            <path d="M6.343 17.657l-1.414 1.414"></path>
+                            <path d="M19.071 19.071l-1.414-1.414"></path>
+                            <path d="M6.343 6.343L4.929 4.929"></path>
+                        </svg>
+                    </div>
+                    <div class="logo-text-group">
+                        <span class="logo-text">English Lab</span>
+                        <span class="brand-signature">by GYTama EDU</span>
+                    </div>
+                </a>
+            </div>
+            
+            <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+                <span class="hamburger"></span>
+            </button>
+            
+            <nav id="nav-menu" class="nav-menu" role="navigation" aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../index.html#labs" class="nav-link">The Labs</a></li>
+                    <li><a href="../index.html#about" class="nav-link">About</a></li>
+                </ul>
+                <a href="../index.html#labs" class="button button-primary nav-btn">
+                    Explore Labs
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="lesson-shell">
+        <div id="lesson-loading" class="lesson-loading">
+            Preparing Lesson…
+        </div>
+        
+        <div id="lesson-unavailable" class="lesson-unavailable" style="display: none;">
+            <h1 class="lesson-unavailable__heading">Lesson Unavailable</h1>
+            <p class="lesson-unavailable__text">This lesson could not be loaded. Please return to the lab and try again later.</p>
+            <div class="lesson-unavailable__actions">
+                <a href="../index.html" class="button button-primary">Return to English Lab</a>
+                <a href="../labs/grammar.html" class="button button-secondary">Return to Grammar Lab</a>
+            </div>
+        </div>
+
+        <div id="lesson-container" style="display: none;">
+            <nav class="lesson-breadcrumb" aria-label="Breadcrumb" id="lesson-breadcrumb"></nav>
+            
+            <header class="lesson-header" id="lesson-header"></header>
+            
+            <section class="lesson-toc" aria-label="Table of Contents" id="lesson-toc"></section>
+            
+            <div id="lesson-content"></div>
+            
+            <section class="lesson-practice-cta" id="lesson-practice-cta"></section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="footer-logo">English Lab</span>
+                <span class="footer-signature">by GYTama EDU</span>
+                <p class="footer-tagline">Learn. Practise. Communicate.</p>
+            </div>
+            <nav class="footer-nav" aria-label="Footer Navigation">
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#labs">The Labs</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright">&copy; <span id="current-year"></span> GYTama EDU. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script type="module" src="lesson.js"></script>
+</body>
+</html>

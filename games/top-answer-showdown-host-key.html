@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Host Answer Sheet | Top Answer Showdown</title>
+    <meta name="description" content="Host Answer Sheet for Top Answer Showdown.">
+    <meta name="theme-color" content="#FF9E4A">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Oxanium:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="top-answer-showdown-host-key.css">
+</head>
+<body class="host-key-page">
+    <a href="#host-key-content" class="skip-link">Skip to content</a>
+
+    <header class="navbar print-hidden" id="navbar">
+        <div class="nav-container">
+            <div class="brand">
+                <a href="../index.html" class="logo-link" aria-label="Go to homepage">
+                    <div class="logo-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M12 2v2"></path>
+                            <path d="M12 20v2"></path>
+                            <path d="M2 12h2"></path>
+                            <path d="M20 12h2"></path>
+                            <path d="M19.071 4.929l-1.414 1.414"></path>
+                            <path d="M6.343 17.657l-1.414 1.414"></path>
+                            <path d="M19.071 19.071l-1.414-1.414"></path>
+                            <path d="M6.343 6.343L4.929 4.929"></path>
+                        </svg>
+                    </div>
+                    <div class="logo-text-group">
+                        <span class="logo-text">English Lab</span>
+                        <span class="brand-signature">by GYTama EDU</span>
+                    </div>
+                </a>
+            </div>
+            <nav id="nav-menu" class="nav-menu" role="navigation" aria-label="Main Navigation">
+                <ul class="nav-list" style="margin-right: 1rem;">
+                    <li><a href="../labs/game-lab.html" class="nav-link">Return to Game Lab</a></li>
+                </ul>
+                <a href="#" id="return-game-link" class="button button-secondary nav-btn">Return to Game</a>
+                <button type="button" onclick="window.print()" class="button button-primary nav-btn" style="background-color: var(--orange); border-color: var(--orange); color: var(--space-black); margin-left: 0.5rem;">Print Answer Sheet</button>
+            </nav>
+        </div>
+    </header>
+
+    <main id="host-key-content" class="host-key-shell section-container">
+        <div id="host-key-container" class="host-key-container">
+            <!-- Dynamic content injected here -->
+            <div class="state-message" style="text-align: center; padding: 4rem 1rem;">
+                <h2 style="color: var(--text-secondary);">Loading Game Data...</h2>
+            </div>
+        </div>
+    </main>
+
+    <script src="../script.js"></script>
+    <script type="module" src="top-answer-showdown-host-key.js"></script>
+</body>
+</html>

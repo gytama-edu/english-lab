@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Host Answer Sheet - English Jeopardy</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Oxanium:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body { background-color: var(--surface); color: var(--text-primary); font-family: var(--font-body); padding: 2rem; }
+        .sheet-container { max-width: 900px; margin: 0 auto; background: var(--surface-elevated); padding: 2rem; border-radius: 8px; border: 1px solid var(--border); }
+        .header-actions { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem; }
+        .pack-title { font-family: var(--font-heading); color: var(--orange); font-size: 2rem; margin: 0 0 0.5rem 0; }
+        .category-block { margin-bottom: 2rem; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+        .category-header { background: rgba(255,158,74,0.1); padding: 1rem; border-bottom: 1px solid var(--border); color: var(--orange); font-family: var(--font-heading); font-weight: bold; font-size: 1.25rem; }
+        .clue-row { padding: 1rem; border-bottom: 1px solid var(--border); display: flex; gap: 1rem; }
+        .clue-row:last-child { border-bottom: none; }
+        .clue-value { font-family: var(--font-heading); font-weight: bold; color: #4AD8C1; min-width: 60px; }
+        .clue-q { font-weight: 500; margin-bottom: 0.5rem; }
+        .clue-a { color: #4AD8C1; font-weight: bold; }
+        @media print {
+            body { background: white; color: black; padding: 0; }
+            .sheet-container { border: none; box-shadow: none; padding: 0; }
+            .no-print { display: none !important; }
+            .category-block { page-break-inside: avoid; border-color: #ccc; }
+            .clue-row { border-color: #ccc; }
+            .pack-title, .category-header { color: black; }
+            .clue-value, .clue-a { color: #333; }
+        }
+    </style>
+</head>
+<body>
+    <div class="sheet-container" id="content">
+        <p>Loading...</p>
+    </div>
+    
+    <script src="../data/games/english-mix-challenge.js"></script>
+    <script src="english-jeopardy-host-key.js"></script>
+</body>
+</html>

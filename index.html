@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Lab by GYTama EDU</title>
+    <meta name="description" content="English Lab by GYTama EDU is a practical digital learning space for developing grammar, vocabulary, speaking, listening, reading, and writing skills.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Oxanium:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="brand">
+                <a href="#" class="logo-link" aria-label="Go to homepage">
+                    <div class="logo-icon-wrapper">
+                        <!-- Tiny orbit / star mark -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M12 2v2"></path>
+                            <path d="M12 20v2"></path>
+                            <path d="M2 12h2"></path>
+                            <path d="M20 12h2"></path>
+                            <path d="M19.071 4.929l-1.414 1.414"></path>
+                            <path d="M6.343 17.657l-1.414 1.414"></path>
+                            <path d="M19.071 19.071l-1.414-1.414"></path>
+                            <path d="M6.343 6.343L4.929 4.929"></path>
+                        </svg>
+                    </div>
+                    <div class="logo-text-group">
+                        <span class="logo-text">English Lab</span>
+                        <span class="brand-signature">by GYTama EDU</span>
+                    </div>
+                </a>
+            </div>
+            
+            <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+                <span class="hamburger"></span>
+            </button>
+            
+            <nav id="nav-menu" class="nav-menu" role="navigation" aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#labs" class="nav-link">The Labs</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                </ul>
+                <a href="#labs" class="button button-primary nav-btn">
+                    Explore Labs
+                    <svg class="explore-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+                        <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+                        <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+                        <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+                    </svg>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section id="home" class="hero-section section-container">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <span class="small-label">ENGLISH LAB BY GYTAMA EDU</span>
+                    <h1 class="main-heading">A Space to<br><span class="heading-highlight">Explore English</span></h1>
+                    <p class="hero-description">
+                        Develop practical English skills through focused laboratories, meaningful practice, and interactive learning.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#labs" class="button button-primary">Explore Labs</a>
+                        <a href="#about" class="button button-secondary">About English Lab</a>
+                    </div>
+                </div>
+                <div class="hero-visual" aria-hidden="true">
+                    <!-- Space planet inline SVG -->
+                    <svg viewBox="0 0 400 400" width="100%" height="auto">
+                        <defs>
+                            <radialGradient id="planetGlow" cx="50%" cy="50%" r="50%">
+                                <stop offset="60%" stop-color="rgba(77, 163, 255, 0.1)"></stop>
+                                <stop offset="100%" stop-color="transparent"></stop>
+                            </radialGradient>
+                            <linearGradient id="planetSurface" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#111F3D"></stop>
+                                <stop offset="100%" stop-color="#050A18"></stop>
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Glow -->
+                        <circle cx="200" cy="200" r="140" fill="url(#planetGlow)"></circle>
+                        
+                        <!-- Core Planet -->
+                        <g class="planet-group">
+                            <circle cx="200" cy="200" r="80" fill="url(#planetSurface)" stroke="rgba(125, 160, 220, 0.4)" stroke-width="2"></circle>
+                            <!-- Planet grid lines -->
+                            <path d="M120 200 A 80 80 0 0 0 280 200" fill="none" stroke="rgba(77, 163, 255, 0.2)" stroke-width="1.5"></path>
+                            <path d="M140 145 A 60 40 0 0 0 260 145" fill="none" stroke="rgba(77, 163, 255, 0.15)" stroke-width="1"></path>
+                            <path d="M140 255 A 60 40 0 0 1 260 255" fill="none" stroke="rgba(77, 163, 255, 0.15)" stroke-width="1"></path>
+                            
+                            <!-- Lab structures on planet -->
+                            <circle cx="160" cy="180" r="4" fill="#4DA3FF"></circle>
+                            <circle cx="220" cy="210" r="3" fill="#E66BFF"></circle>
+                            <circle cx="240" cy="170" r="2" fill="#4AD8C1"></circle>
+                            <path d="M160 180 L220 210 L240 170" fill="none" stroke="rgba(77, 163, 255, 0.3)" stroke-dasharray="2 2"></path>
+                        </g>
+
+                        <!-- Orbital Rings -->
+                        <g class="orbit-ring">
+                            <ellipse cx="200" cy="200" rx="140" ry="40" fill="none" stroke="rgba(125, 160, 220, 0.2)" stroke-width="1" transform="rotate(-15 200 200)"></ellipse>
+                            <circle cx="65" cy="165" r="3" fill="#9A6CFF" transform="rotate(-15 200 200)"></circle>
+                        </g>
+
+                        <g class="orbit-ring-reverse">
+                            <ellipse cx="200" cy="200" rx="180" ry="60" fill="none" stroke="rgba(77, 163, 255, 0.15)" stroke-width="1" stroke-dasharray="8 4" transform="rotate(25 200 200)"></ellipse>
+                            <!-- Satellite -->
+                            <g transform="translate(15, 200) rotate(25 200 200)">
+                                <rect x="-6" y="-4" width="12" height="8" fill="#111F3D" stroke="#4DA3FF" stroke-width="1"></rect>
+                                <line x1="-12" y1="0" x2="-6" y2="0" stroke="#4DA3FF" stroke-width="1.5"></line>
+                                <line x1="6" y1="0" x2="12" y2="0" stroke="#4DA3FF" stroke-width="1.5"></line>
+                            </g>
+                        </g>
+
+                        <!-- Floating stars/nodes -->
+                        <circle class="star-flash" cx="80" cy="80" r="1.5" fill="#FFF"></circle>
+                        <circle class="star-flash" cx="320" cy="100" r="2" fill="#FFF"></circle>
+                        <circle class="star-flash" cx="300" cy="300" r="1" fill="#FFF"></circle>
+                        
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <section id="labs" class="labs-section section-container">
+            <div class="section-header">
+                <span class="small-label">CHOOSE YOUR LAB</span>
+                <h2 class="section-heading">Explore the English Labs</h2>
+                <p class="section-description">
+                    Choose a skill and begin your journey. Learning experiments will be added gradually.
+                </p>
+            </div>
+            
+            <div class="labs-grid">
+                <!-- Grammar Lab (Blue) -->
+                <a href="labs/grammar.html" class="lab-card grammar">
+                    <div class="lab-icon-container">
+                        <svg class="lab-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                            <path d="M10 6h4"></path>
+                            <path d="M17 10v4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="lab-title">Grammar Lab</h3>
+                    <p class="lab-description">Explore sentence patterns and understand how English works.</p>
+                    <span class="lab-arrow">Enter Lab <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                </a>
+                
+                <!-- Vocabulary Lab (Teal) -->
+                <a href="labs/vocabulary.html" class="lab-card vocabulary">
+                    <div class="lab-icon-container">
+                        <svg class="lab-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .11 1.89l1.8 2.6a2 2 0 0 1-3.24 2.14l-2.6-1.8a1.65 1.65 0 0 0-1.89.11l-2.6 1.8a2 2 0 0 1-2.14-3.24l1.8-2.6a1.65 1.65 0 0 0-.11-1.89l-1.8-2.6a2 2 0 0 1 3.24-2.14l2.6 1.8a1.65 1.65 0 0 0 1.89-.11l2.6-1.8a2 2 0 0 1 2.14 3.24l-1.8 2.6z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="lab-title">Vocabulary Lab</h3>
+                    <p class="lab-description">Discover useful words, expressions, and word connections.</p>
+                    <span class="lab-arrow">Enter Lab <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                </a>
+                
+                <!-- Speaking Lab (Purple) -->
+                <a href="labs/speaking.html" class="lab-card speaking">
+                    <div class="lab-icon-container">
+                        <svg class="lab-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+                            <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                            <line x1="12" y1="19" x2="12" y2="22"></line>
+                            <path d="M8 22h8"></path>
+                        </svg>
+                    </div>
+                    <h3 class="lab-title">Speaking Lab</h3>
+                    <p class="lab-description">Build confidence, pronunciation, and everyday communication.</p>
+                    <span class="lab-arrow">Enter Lab <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                </a>
+                
+                <!-- Listening Lab (Cyan) -->
+                <a href="labs/listening.html" class="lab-card listening">
+                    <div class="lab-icon-container">
+                        <svg class="lab-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"></path>
+                            <path d="M6 10a6 6 0 0 1 12 0"></path>
+                        </svg>
+                    </div>
+                    <h3 class="lab-title">Listening Lab</h3>
+                    <p class="lab-description">Improve listening comprehension and real-world understanding.</p>
+                    <span class="lab-arrow">Enter Lab <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                </a>
+                
+                <!-- Reading Lab (Gold) -->
+                <a href="labs/reading.html" class="lab-card reading">
+                    <div class="lab-icon-container">
+                        <svg class="lab-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="lab-title">Reading Lab</h3>
+                    <p class="lab-description">Explore stories, texts, and written communication.</p>
+                    <span class="lab-arrow">Enter Lab <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                </a>
+                
+                <!-- Writing Lab (Pink) -->
+                <a href="labs/writing.html" class="lab-card writing">
+                    <div class="lab-icon-container">
+                        <svg class="lab-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                            <path d="M2 2l7.586 7.586"></path>
+                            <circle cx="11" cy="11" r="2"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="lab-title">Writing Lab</h3>
+                    <p class="lab-description">Develop clear sentences, paragraphs, and written ideas.</p>
+                    <span class="lab-arrow">Enter Lab <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                </a>
+
+                <!-- Game Lab (Orange) -->
+                <a href="labs/game-lab.html" class="lab-card game">
+                    <div class="lab-icon-container">
+                        <svg class="lab-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="6" y1="11" x2="10" y2="11"></line>
+                            <line x1="8" y1="9" x2="8" y2="13"></line>
+                            <line x1="15" y1="12" x2="15.01" y2="12"></line>
+                            <line x1="18" y1="10" x2="18.01" y2="10"></line>
+                            <path d="M17.3 5H6.7a4 4 0 0 0-4 4v6a4 4 0 0 0 4 4h10.6a4 4 0 0 0 4-4V9a4 4 0 0 0-4-4Z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="lab-title">Game Lab</h3>
+                    <p class="lab-description">Play teacher-hosted English games for teams, classrooms, and group practice.</p>
+                    <span class="lab-arrow">Enter Lab <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="about-section section-container">
+            <div class="about-module">
+                <div class="about-content">
+                    <h2 class="section-heading">Your Launchpad for Real-World English</h2>
+                    <p class="about-text-primary">
+                        English Lab by GYTama EDU is a digital learning space designed to make English practice focused, practical, and engaging.
+                    </p>
+                    <p class="about-text-secondary">
+                        Explore, practise, and grow through skill-based laboratories designed for real-world communication.
+                    </p>
+                    <p class="creator-line">
+                        Created by Mr. Gilang Yudha Tama.
+                    </p>
+                </div>
+                <div class="about-visual" aria-hidden="true">
+                    <svg viewBox="0 0 100 100" width="100%" height="auto">
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(77, 163, 255, 0.2)" stroke-width="2" stroke-dasharray="4 4"></circle>
+                        <circle cx="50" cy="50" r="25" fill="#111F3D" stroke="#4DA3FF" stroke-width="1.5"></circle>
+                        <circle cx="50" cy="50" r="5" fill="#E66BFF"></circle>
+                        <!-- Orbital dots -->
+                        <circle cx="50" cy="10" r="3" fill="#4AD8C1"></circle>
+                        <circle cx="90" cy="50" r="2" fill="#F6C85F"></circle>
+                    </svg>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="footer-logo">English Lab</span>
+                <span class="footer-signature">by GYTama EDU</span>
+                <p class="footer-tagline">Learn. Practise. Communicate.</p>
+            </div>
+            <nav class="footer-nav" aria-label="Footer Navigation">
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#labs">The Labs</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright">&copy; <span id="current-year"></span> GYTama EDU. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading Practice | English Lab by GYTama EDU</title>
+    <meta name="description" content="Practise reading for main ideas and supporting details.">
+    <meta name="theme-color" content="#F6C85F">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Oxanium:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reading-practice.css">
+</head>
+<body class="activity-page">
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="brand">
+                <a href="../index.html" class="logo-link" aria-label="Go to homepage">
+                    <div class="logo-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M12 2v2"></path>
+                            <path d="M12 20v2"></path>
+                            <path d="M2 12h2"></path>
+                            <path d="M20 12h2"></path>
+                            <path d="M19.071 4.929l-1.414 1.414"></path>
+                            <path d="M6.343 17.657l-1.414 1.414"></path>
+                            <path d="M19.071 19.071l-1.414-1.414"></path>
+                            <path d="M6.343 6.343L4.929 4.929"></path>
+                        </svg>
+                    </div>
+                    <div class="logo-text-group">
+                        <span class="logo-text">English Lab</span>
+                        <span class="brand-signature">by GYTama EDU</span>
+                    </div>
+                </a>
+            </div>
+            
+            <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+                <span class="hamburger"></span>
+            </button>
+            
+            <nav id="nav-menu" class="nav-menu" role="navigation" aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../index.html#labs" class="nav-link">The Labs</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="reading-practice-container">
+        
+        <!-- Loading State -->
+        <div id="state-loading" aria-live="polite">
+            <div class="reading-intro">
+                <h1>Loading Activity...</h1>
+            </div>
+        </div>
+
+        <!-- Unavailable State -->
+        <div id="state-unavailable" hidden>
+            <div class="reading-intro">
+                <h1>Activity Not Found</h1>
+                <p>The requested reading activity could not be loaded or does not exist.</p>
+                <a href="../labs/reading.html" class="button button-primary start-btn">Return to Reading Lab</a>
+            </div>
+        </div>
+
+        <!-- Introduction State -->
+        <div id="state-introduction" hidden>
+            <div class="reading-intro">
+                <h1 id="intro-title" class="sr-only">Reading Practice</h1>
+                <p id="intro-desc"></p>
+                <div id="intro-instructions" class="passage-context" style="text-align: left; margin: 2rem 0;"></div>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <button id="btn-start" class="button button-primary start-btn">Start Reading</button>
+                    <a id="btn-lesson" href="#" class="button button-secondary start-btn">Review Lesson</a>
+                </div>
+                <div style="margin-top: 2rem;">
+                    <a href="../labs/reading.html" style="color: var(--text-secondary); text-decoration: none; font-size: 0.9rem;">← Back to Reading Lab</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Active Practice State -->
+        <div id="state-active" class="reading-active-layout" hidden>
+            <div class="passage-panel" id="passage-panel" tabindex="-1">
+                <span class="content-section-label" id="passage-section-label">Section 1</span>
+                <h2 class="passage-title" id="passage-title">Passage Title</h2>
+                <div class="passage-context" id="passage-context">Context goes here.</div>
+                <div class="passage-content" id="passage-content">
+                    <!-- Paragraphs injected here -->
+                </div>
+            </div>
+            
+            <div class="question-panel">
+                <div class="question-status" id="question-status" aria-live="polite">Question 1 of 10</div>
+                <span class="content-section-label" id="question-section-label">Section 1</span>
+                <h3 class="question-prompt" id="question-prompt">Question prompt?</h3>
+                
+                <div id="answer-container">
+                    <!-- Options or short answer input injected here -->
+                </div>
+                
+                <div class="question-actions">
+                    <button id="btn-prev" class="button button-secondary nav-btn">Previous</button>
+                    <button id="btn-next" class="button button-primary nav-btn">Next</button>
+                    <button id="btn-review" class="button button-primary nav-btn" hidden>Review Answers</button>
+                </div>
+                
+                <div class="navigator-panel">
+                    <span class="navigator-label" id="navigator-label">Question Navigator</span>
+                    <div class="navigator-grid" id="navigator-grid" role="group" aria-labelledby="navigator-label">
+                        <!-- Navigator buttons injected here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Review State -->
+        <div id="state-review" hidden>
+            <div class="review-panel">
+                <h2 class="passage-title" style="text-align: center; margin-bottom: 2rem;">Review Your Answers</h2>
+                <div id="review-list">
+                    <!-- Review items injected here -->
+                </div>
+                <div class="review-actions">
+                    <button id="btn-back-to-questions" class="button button-secondary">Return to Questions</button>
+                    <button id="btn-submit-all" class="button button-primary">Submit Answers</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results State -->
+        <div id="state-results" hidden>
+            <div class="results-panel">
+                <div class="results-header">
+                    <h2 class="passage-title">Activity Results</h2>
+                    <div class="results-score" id="results-score">8 / 10</div>
+                    <p style="color: var(--text-secondary);">correct</p>
+                </div>
+                
+                <div id="results-message" class="results-message"></div>
+                
+                <div id="results-list">
+                    <!-- Result items injected here -->
+                </div>
+                
+                <div class="results-actions">
+                    <button id="btn-retry" class="button button-primary">Practise Again</button>
+                    <a id="btn-results-lesson" href="#" class="button button-secondary">Return to Lesson</a>
+                    <a href="../labs/reading.html" class="button button-secondary">Return to Reading Lab</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="site-footer" style="margin-top: 4rem;">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="footer-logo">English Lab</span>
+                <span class="footer-signature">by GYTama EDU</span>
+            </div>
+            <p class="copyright">&copy; <span id="current-year"></span> GYTama EDU. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script type="module" src="reading-practice.js"></script>
+</body>
+</html>

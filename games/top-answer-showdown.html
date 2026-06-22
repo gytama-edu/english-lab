@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Answer Showdown | English Lab by GYTama EDU</title>
+    <meta name="description" content="Play Top Answer Showdown, a classroom game from English Lab by GYTama EDU.">
+    <meta name="theme-color" content="#FF9E4A">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Oxanium:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="top-answer-showdown.css">
+</head>
+<body class="game-page">
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="brand">
+                <a href="../index.html" class="logo-link" aria-label="Go to homepage">
+                    <div class="logo-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M12 2v2"></path>
+                            <path d="M12 20v2"></path>
+                            <path d="M2 12h2"></path>
+                            <path d="M20 12h2"></path>
+                            <path d="M19.071 4.929l-1.414 1.414"></path>
+                            <path d="M6.343 17.657l-1.414 1.414"></path>
+                            <path d="M19.071 19.071l-1.414-1.414"></path>
+                            <path d="M6.343 6.343L4.929 4.929"></path>
+                        </svg>
+                    </div>
+                    <div class="logo-text-group">
+                        <span class="logo-text">English Lab</span>
+                        <span class="brand-signature">by GYTama EDU</span>
+                    </div>
+                </a>
+            </div>
+            
+            <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+                <span class="hamburger"></span>
+            </button>
+            
+            <nav id="nav-menu" class="nav-menu" role="navigation" aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../index.html#labs" class="nav-link">The Labs</a></li>
+                    <li><a href="../index.html#about" class="nav-link">About</a></li>
+                </ul>
+                <a href="../index.html#labs" class="button button-primary nav-btn" style="background-color: var(--orange); border-color: var(--orange); color: var(--space-black);">
+                    Explore Labs
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="game-shell section-container">
+        <a href="../labs/game-lab.html" class="lab-back-link">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Back to Game Lab
+        </a>
+        <div id="game-container" class="game-container">
+            <!-- Dynamic content injected here -->
+        </div>
+        <div aria-live="polite" id="game-announcer" class="sr-only"></div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="footer-logo">English Lab</span>
+                <span class="footer-signature">by GYTama EDU</span>
+                <p class="footer-tagline">Learn. Practise. Communicate.</p>
+            </div>
+            <nav class="footer-nav" aria-label="Footer Navigation">
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#labs">The Labs</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright">&copy; <span id="current-year"></span> GYTama EDU. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script type="module" src="top-answer-showdown.js"></script>
+</body>
+</html>

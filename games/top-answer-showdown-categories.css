@@ -1,0 +1,82 @@
+/* Specific styles for Top Answer Showdown Categories Page */
+
+.showdown-categories-page .points-notice {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: rgba(255, 158, 74, 0.1);
+    border-left: 4px solid var(--orange);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.categories-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1100px) {
+    .categories-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.category-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.category-card__title {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+}
+
+.category-card__desc {
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.category-card__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: auto;
+}
+
+.category-card__actions .button {
+    justify-content: center;
+    width: 100%;
+}
+
+.category-card__actions .button-primary {
+    background-color: var(--orange);
+    border-color: var(--orange);
+    color: var(--space-black);
+}
+
+.category-card__actions .button-secondary {
+    border-color: var(--border-color);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+}
+
+.category-card__actions .button-secondary svg {
+    width: 14px;
+    height: 14px;
+    margin-left: 0.5rem;
+    opacity: 0.7;
+}
+
+.host-key-link-wrapper {
+    position: relative;
+    width: 100%;
+}
