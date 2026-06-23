@@ -517,13 +517,28 @@ class EnglishJeopardyController {
   }
 
   confirmResetBoard() {
-      if(confirm("Reset the board? This will restore all questions and clear scores, but keep the teams.")) {
+      if(confirm("Reset the board? Team names and scores will be preserved.")) {
           this.clearTimer();
           this.state.subMode = null;
           this.state.currentClue = null;
           this.state.history = [];
           this.saveState("Reset Board");
           this.state.usedTiles = [];
+          this.state.isComplete = false;
+          this.saveGameLocally();
+          this.renderBoard();
+          audioApp.playOpenClue();
+      }
+  }
+
+  playAgain() {
+      if(confirm("Play again? This will reset the board and clear all scores.")) {
+          this.clearTimer();
+          this.state.subMode = null;
+          this.state.currentClue = null;
+          this.state.history = [];
+          this.state.usedTiles = [];
+          this.state.isComplete = false;
           this.state.teams.forEach(t => t.score = 0);
           this.saveGameLocally();
           this.renderBoard();
@@ -532,7 +547,7 @@ class EnglishJeopardyController {
   }
 
   confirmResetGame() {
-      if(confirm("Reset the entire game and return to setup?")) {
+      if(confirm("Reset the entire game? Scores and progress will be cleared.")) {
           this.clearTimer();
           localStorage.removeItem("jeopardy-save");
           this.state = this.getInitialState();
