@@ -1,5 +1,12 @@
 const englishJeopardyDataLoaders = {
-  "english-mix-1": "../data/games/english-mix-challenge.js"
+  "english-mix-1": {
+    title: "English Mix Challenge",
+    loader: "../data/games/english-mix-challenge.js"
+  },
+  "grammar-challenge": {
+    title: "Grammar Challenge",
+    loader: "../data/games/grammar-challenge.js"
+  }
 };
 
 class AudioEngine {
@@ -151,7 +158,7 @@ class EnglishJeopardyController {
               return Promise.resolve(true);
           }
           return new Promise((resolve, reject) => {
-              const loader = englishJeopardyDataLoaders[packId];
+              const loader = englishJeopardyDataLoaders[packId]?.loader;
               if(!loader) {
                   reject(new Error("Invalid pack"));
                   return;
@@ -310,7 +317,8 @@ class EnglishJeopardyController {
 
       let packOptions = "";
       for(const k in englishJeopardyDataLoaders) {
-          packOptions += `<option value="${k}">${k}</option>`;
+          const pack = englishJeopardyDataLoaders[k];
+          packOptions += `<option value="${k}" title="${this.escapeHtml(pack.title)}">${this.escapeHtml(pack.title)}</option>`;
       }
 
       this.container.innerHTML = `
