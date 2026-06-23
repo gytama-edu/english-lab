@@ -1,5 +1,6 @@
 const englishJeopardyDataLoaders = {
-    "english-mix-1": "../data/games/english-mix-challenge.js"
+    "english-mix-1": "../data/games/english-mix-challenge.js",
+    "grammar-challenge": "../data/games/grammar-challenge.js"
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -13,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    // Since we statically loaded english-mix-challenge.js in the HTML, we can just use window.JEOPARDY_DATA
+    // Since we statically loaded the pack scripts in the HTML, we can just use window.JEOPARDY_DATA
     const data = window.JEOPARDY_DATA && window.JEOPARDY_DATA[packId];
     if (data) {
         renderSheet(data, container);
@@ -46,12 +47,17 @@ function renderSheet(data, container) {
         `;
         
         cat.clues.forEach(clue => {
+            const accepted = Array.isArray(clue.acceptedAnswers) && clue.acceptedAnswers.length > 0
+                ? clue.acceptedAnswers.map(answer => escapeHtml(answer)).join("; ")
+                : "";
             html += `
                 <div class="clue-row">
                     <div class="clue-value">${clue.value}</div>
                     <div class="clue-content">
                         <div class="clue-q">Q: ${escapeHtml(clue.question)}</div>
                         <div class="clue-a">A: ${escapeHtml(clue.answer)}</div>
+                        ${accepted ? `<div class="clue-accepted">Accepted answers: ${accepted}</div>` : ""}
+                        ${clue.explanation ? `<div class="clue-explanation">Explanation: ${escapeHtml(clue.explanation)}</div>` : ""}
                     </div>
                 </div>
             `;
