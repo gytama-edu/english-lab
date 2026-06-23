@@ -1,6 +1,9 @@
 const englishJeopardyDataLoaders = {
   "english-mix-1": "../data/games/english-mix-challenge.js",
-  "everyday-english-challenge": "../data/games/everyday-english-challenge.js"
+  "everyday-english-challenge": "../data/games/everyday-english-challenge.js",
+  "teen-english-challenge": "../data/games/teen-english-challenge.js",
+  "grammar-challenge": "../data/games/grammar-challenge.js",
+  "vocabulary-challenge": "../data/games/vocabulary-challenge.js"
 };
 
 class AudioEngine {
@@ -311,7 +314,9 @@ class EnglishJeopardyController {
 
       let packOptions = "";
       for(const k in englishJeopardyDataLoaders) {
-          packOptions += `<option value="${k}">${k}</option>`;
+          const packData = window.JEOPARDY_DATA && window.JEOPARDY_DATA[k];
+          const packTitle = packData && packData.title ? packData.title : k;
+          packOptions += `<option value="${k}">${this.escapeHtml(packTitle)}</option>`;
       }
 
       this.container.innerHTML = `

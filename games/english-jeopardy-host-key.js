@@ -1,6 +1,9 @@
 const englishJeopardyDataLoaders = {
     "english-mix-1": "../data/games/english-mix-challenge.js",
-    "everyday-english-challenge": "../data/games/everyday-english-challenge.js"
+    "everyday-english-challenge": "../data/games/everyday-english-challenge.js",
+    "teen-english-challenge": "../data/games/teen-english-challenge.js",
+    "grammar-challenge": "../data/games/grammar-challenge.js",
+    "vocabulary-challenge": "../data/games/vocabulary-challenge.js"
 };
 
 document.addEventListener("DOMContentLoaded", () => {
