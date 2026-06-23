@@ -6,6 +6,10 @@ const englishJeopardyDataLoaders = {
   "grammar-challenge": {
     title: "Grammar Challenge",
     loader: "../data/games/grammar-challenge.js"
+  },
+  "vocabulary-challenge": {
+    title: "Vocabulary Challenge",
+    loader: "../data/games/vocabulary-challenge.js"
   }
 };
 
