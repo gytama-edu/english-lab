@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Host Answer Sheet | Million Point Mission</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Oxanium:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body { background: white; color: #333; padding: 2rem; font-family: var(--font-body); }
+        .controls { margin-bottom: 2rem; display: flex; gap: 1rem; align-items: center; justify-content: space-between; }
+        .controls select { padding: 0.5rem; font-size: 1rem; }
+        .sheet-container { max-width: 800px; margin: 0 auto; }
+        h1 { color: #111; font-family: var(--font-heading); margin-bottom: 0.5rem; }
+        .sheet-desc { color: #555; margin-bottom: 2rem; }
+        .q-block { border: 1px solid #ddd; margin-bottom: 1.5rem; border-radius: 8px; overflow: hidden; page-break-inside: avoid; }
+        .q-header { background: #f5f5f5; padding: 1rem; border-bottom: 1px solid #ddd; display: flex; justify-content: space-between; font-weight: bold; }
+        .q-header.milestone { background: #e0f7fa; }
+        .q-body { padding: 1rem; }
+        .q-topic { color: #666; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 0.5rem; }
+        .q-text { font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem; }
+        .q-options { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 1rem; }
+        .q-option { padding: 0.5rem; border: 1px solid #eee; border-radius: 4px; }
+        .q-option.correct { background: #e8f5e9; border-color: #4caf50; font-weight: bold; }
+        .q-explanation { background: #fff3e0; padding: 0.75rem; border-left: 4px solid #ff9800; font-size: 0.95rem; }
+        
+        .reserve-label { background: #ffebee; color: #c62828; padding: 0.25rem 0.5rem; font-size: 0.8rem; border-radius: 4px; margin-left: 0.5rem; text-transform: uppercase; }
+
+        @media print {
+            .controls { display: none; }
+            body { padding: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <div>
+            <select id="pack-select"></select>
+            <button onclick="window.print()" class="button button-primary">Print Sheet</button>
+        </div>
+        <a href="million-point-mission.html" class="button button-secondary">Return to Game</a>
+    </div>
+    
+    <div class="sheet-container" id="sheet-container">
+        <!-- Rendered by JS -->
+    </div>
+
+    <script src="../data/games/million-point-mission-packs.js"></script>
+    <script src="million-point-mission-host-key.js"></script>
+</body>
+</html>
